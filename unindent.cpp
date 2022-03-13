@@ -21,7 +21,14 @@ std::string removeLeadingSpaces(std::string line)
 
 int main()
 {
-  std::cout << removeLeadingSpaces(std::cin >> line);
+  std::cout << removeLeadingSpaces("                int main(){
+           // Hi, I'm a program!
+int x = 1; 
+    for(int i = 0; i < 10; i++) {
+cout << i;
+          cout << endl;
+ }
+    }");
 
   return 0;
 }

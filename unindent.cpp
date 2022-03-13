@@ -10,7 +10,7 @@ std::string removeLeadingSpaces(std::string line)
   std::string newline;
   for (int i = 0; i < line.length(); i++)
     {
-      if isspace(line[i])
+      if (isspace(line[i]))
       newline += "";
       else
       newline += line[i];
@@ -21,6 +21,7 @@ std::string removeLeadingSpaces(std::string line)
 
 int main()
 {
+  std::cout << removeLeadingSpaces(std::cin >> line);
 
   return 0;
 }

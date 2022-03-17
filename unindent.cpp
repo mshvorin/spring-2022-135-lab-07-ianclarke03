@@ -32,7 +32,8 @@ int main()
   std::ifstream if_file("bad-code.cpp");
   std::string str; //str is to store the line read
   //getline(if_file, str);
-  std::cout << removeLeadingSpaces(str);
+  removeLeadingSpaces(str);
+  //if_file.open("bad-code.cpp"); Suppose fin is an object of ifstream. How to open a file called data.txt?
   if_file.close();
   
 

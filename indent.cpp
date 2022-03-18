@@ -23,7 +23,6 @@ int countChar(std::string line, char c)
 
 
 
-
 int main()
 {
   std::cout << countChar("hello{ world}{{{ ! ian}}}", '{') << "\n";

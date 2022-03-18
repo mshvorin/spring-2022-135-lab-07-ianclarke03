@@ -8,19 +8,34 @@
 int countChar(std::string line, char c)
 {
   int count = 0;
-  for (int i = 0; i < line.length(); i++)
-    {
+  for (int i = 0; i < line.length(); i++){
     if (line[i] == c)
-      count += 1;
-      }
+      count++;
+  }
   return count;
+  
+  if(line.find("{") < line.find("}") && line.find("{") != -1 && line.find("}") != -1){ 
+        return count - 1;
+    } else { 
+        return count;
+    }
+  }
+
+std::string indent(std::string line, int out, int in) { 
+    std::string result = ""; 
+
+    for(int i = 0; i < out - in; i++) { 
+        result += "\t"; 
+    }
+
+    return result + line; 
 }
 
 // std::cout << countChar("hello{ world}{{{ ! ian}}}", '{') << "\n"; == 4
 
 
 
-  
+  /*
 int main()
 {
   std::ifstream if_file;
@@ -36,3 +51,4 @@ int main()
 
   return 0;
 }
+*/

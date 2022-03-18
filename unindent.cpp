@@ -9,22 +9,25 @@
 std::string removeLeadingSpaces(std::string line)
 {
   std::string newline;
-  for (int i = 0; i < line.length(); i++){
-      if ((line[i]) == )
-      newline += "";
-      else //after it finds the first non-space character, start accumulating the characters into a new string, which will be returned.
-      newline += line[i];
+
+  int n = 0;
+  while (isspace(line[n])){
+    n++;
   }
+  newline += line.substr(n, (line.length() - n)) + "\n";
+
+  
   return newline;
 }
 
 
+
+
+  
 int main()
 {
-
   std::ifstream if_file;
   std::string str; //str is to store the line read
-  
   if_file.open("bad-code.cpp");
   
   while(getline(if_file, str)){
@@ -33,8 +36,23 @@ int main()
 
   if_file.close();
   
+
   return 0;
 }
+
+
+
+//_______________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -94,3 +112,11 @@ inFile.close();
 
   //getline(if_file, str);
   //if_file.open("bad-code.cpp"); Suppose fin is an object of ifstream. How to open a file called data.txt?
+
+  /*for (int i = 0; i < line.length(); i++)
+    {
+      if (isspace(line[i]))
+      newline += "";
+      else //after it finds the first non-space character, start accumulating the characters into a new string, which will be returned.
+      break;
+    }*/

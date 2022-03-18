@@ -10,4 +10,4 @@ unindent.o: unindent.cpp unindent.h
 	g++ -c unindent.cpp
 
 clean: 
-	rm main.o indent.o unindent.o
+	rm main main.o indent.o unindent.o

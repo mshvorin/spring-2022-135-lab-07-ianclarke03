@@ -30,25 +30,3 @@ std::string indent(std::string line, int out, int in) {
 
     return result + line; 
 }
-
-// std::cout << countChar("hello{ world}{{{ ! ian}}}", '{') << "\n"; == 4
-
-
-
-  /*
-int main()
-{
-  std::ifstream if_file;
-  std::string str;
-  if_file.open("bad-code.cpp");
-  
-  while(getline(if_file, str)){
-    std::cout << countChar(str, '{') << "\t" << removeLeadingSpaces(str);
-  }
-
-  if_file.close();
-  
-
-  return 0;
-}
-*/

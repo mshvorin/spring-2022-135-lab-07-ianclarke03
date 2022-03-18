@@ -1,4 +1,6 @@
 #include <iostream>
+#include "unindent.h"
+#include <fstream>
 #include <string>
 #include <cctype>
 
@@ -13,19 +15,24 @@ int countChar(std::string line, char c)
       }
   return count;
 }
-//if c == '}'  count-= 1
+
+// std::cout << countChar("hello{ world}{{{ ! ian}}}", '{') << "\n"; == 4
 
 
 
-
-
-
-
-
-
+  
 int main()
 {
-  std::cout << countChar("hello{ world}{{{ ! ian}}}", '{') << "\n";
+  std::ifstream if_file;
+  std::string str;
+  if_file.open("bad-code.cpp");
+  
+  while(getline(if_file, str)){
+    std::cout << countChar(str, '{') << "\t" << removeLeadingSpaces(str);
+  }
+
+  if_file.close();
+  
 
   return 0;
 }

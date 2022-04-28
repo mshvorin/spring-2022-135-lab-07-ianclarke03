@@ -31,7 +31,21 @@ int main()
     }
   
   fin.close();
+
+
+  std::string line2;
   
+  out_brace = 0;
+  in_brace = 0;
+  fin.open("bad-code2.cpp");
+
+  while(getline(fin, line2)) { 
+        in_brace = countChar(line2, '}') + in_brace;
+        std::string unindented_line2 = removeLeadingSpaces(line2);
+        std::cout << indent(unindented_line2, out_brace, in_brace) << std::endl;
+        out_brace = countChar(line2, '{') + out_brace;
+    }
+  fin.close();
 
   return 0;
 }

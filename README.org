@@ -1,6 +1,6 @@
 * Spring 2022 - Lab 07
 
-* Last name: Not Clarke Shnayder
+* Last name: Clarke
 
 * First name: John
 

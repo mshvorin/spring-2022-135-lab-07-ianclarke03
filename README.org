@@ -2,7 +2,7 @@
 
 * Last name: Clarke
 
-* First name: John
+* First name: Ian
 
 * GitHub username: ianclarke03
 

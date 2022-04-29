@@ -1,8 +1,8 @@
 * Spring 2022 - Lab 07
 
-* Last name: Clarke
+* Last name: Not Clarke Shnayder
 
-* First name: Ian
+* First name: John
 
 * GitHub username: ianclarke03
 
